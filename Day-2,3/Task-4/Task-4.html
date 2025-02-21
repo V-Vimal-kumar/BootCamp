@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="blog-header">
+            <h1>Understanding Responsive Design</h1>
+            <p class="author-date">By John Doe | February 18, 2025</p>
+        </header>
+        <article class="blog-content">
+            <p>Responsive web design is essential for creating websites that look good on a variety of devices. With the rise of mobile internet usage, it is crucial for web developers to ensure that their websites adapt to different screen sizes. By using flexible grids, images, and CSS media queries, a responsive design allows content to rearrange and resize based on the device's width and orientation.</p>
+            <p>One key principle in responsive design is mobile-first design. This approach focuses on designing for smaller screens first and then scaling up for larger devices. With the use of CSS media queries, developers can define styles that apply only when the screen meets certain conditions, such as a specific width or resolution.</p>
+            <p>Incorporating responsive design ensures a better user experience, improves accessibility, and can positively impact search engine rankings. As mobile traffic continues to grow, mastering responsive design has become an essential skill for web developers.</p>
+        </article>
+    </div>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: red;
+        background: yellow;
+    }
+    
+    .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .blog-header {
+        text-align: center;
+    }
+    
+    .blog-header h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    
+    .author-date {
+        font-size: 1em;
+        color: #777;
+    }
+    
+    .blog-content {
+        line-height: 1.6;
+        font-size: 1.1em;
+        margin-top: 20px;
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+    
+        .blog-header h1 {
+            font-size: 1.8em;
+        }
+    
+        .author-date {
+            font-size: 0.9em;
+        }
+    
+        .blog-content {
+            font-size: 1em;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .container {
+            padding: 10px;
+        }
+    
+        .blog-header h1 {
+            font-size: 1.5em;
+        }
+    
+        .author-date {
+            font-size: 0.8em;
+        }
+    
+        .blog-content {
+            font-size: 0.9em;
+        }
+    }
+    
+</style>

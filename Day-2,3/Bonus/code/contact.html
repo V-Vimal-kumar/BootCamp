@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">VIMAL KUMAR</div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-icon">&#9776;</div>
+    </header>
+
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <p>If you have any questions or want to work together, feel free to reach out!</p>
+        
+        <div class="contact-container">
+            <form action="#" method="POST" class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> yourname@example.com</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Location:</strong> Your City, Your Country</p>
+
+                <!-- Social Media Links (Hidden if no links are provided) -->
+                <div class="social-icons">
+                    <a id="github-link" href="#" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    </a>
+                    <a id="linkedin-link" href="#" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

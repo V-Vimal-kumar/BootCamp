@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Featured Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product-container {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .product-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Featured Products</h1>
+    <div class="product-grid">
+        <div class="product-container">
+            <h2>EchoGlobe Smart Speaker</h2>
+            <img src="https://www.reliancedigital.in/medias/Amazon-B085FY9NK8-Speaker-491936052-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMTEzNXxpbWFnZS9qcGVnfGltYWdlcy9oMzIvaGQ4Lzk2MTkyNTA3MDg1MTAuanBnfDBiYzNlODRlNDExY2ZjOGE1MTU2YTEzYThkNGVmMmYxNzM2OWMwZjYxMzNjY2E3OTBjYjIzMTUwNGUyYmJhOTk" height="200" width="50"alt="EchoGlobe Smart Speaker">
+            <p>The EchoGlobe Smart Speaker brings immersive 360° sound, voice assistant integration, and seamless connectivity to your home.</p>
+        </div>
+        <div class="product-container">
+            <h2>NeoVision VR Headset</h2>
+            <img src="https://fortune.com/img-assets/wp-content/uploads/2024/06/Virtual-Reality-Workouts.jpg?w=1440&q=75" height="200" width="50" alt="NeoVision VR Headset">
+            <p>Experience virtual reality like never before with NeoVision VR. Crystal-clear visuals and ultra-low latency ensure a seamless experience.</p>
+        </div>
+        <div class="product-container">
+            <h2>SmartFit Fitness Band</h2>
+            <img src="https://jbfitnessco.com/cdn/shop/products/723466560412_f388f201-26ec-416d-b037-00965763c0df_300x.jpg?v=1671175074" height="200" width="50" alt="SmartFit Fitness Band">
+            <p>Track your fitness goals effortlessly with SmartFit. Stay motivated with real-time health metrics and activity tracking.</p>
+        </div>
+    </div>
+</body>
+</html>
