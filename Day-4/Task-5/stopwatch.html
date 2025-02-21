@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color:rgb(214, 80, 80);
+        }
+        .container {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color:skyblue;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .time {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        button:nth-child(2) { background-color: #2ecc71; } /* Start - Bright Green */ /* Start - Green */
+        button:nth-child(3) { background-color: #c0392b; } /* Stop - Dark Red */ /* Stop - Red */
+        button:nth-child(4) { background-color: #e67e22; } /* Reset - Rich Orange */ /* Reset - Orange */
+        button:nth-child(5) { background-color: #8e44ad; } /* Switch Mode - Deep Purple */ /* Switch Mode - Blue */
+        button:hover {
+            opacity: 0.8;
+        }
+        p {
+            font-size: 1.2em;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="time" id="display">00:00:00</div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()">Reset</button>
+        <button onclick="toggleMode()">Switch Mode</button>
+        <p id="mode">Mode: Stopwatch</p>
+    </div>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let time = 0;
+        let mode = "stopwatch";
+
+        function startTimer() {
+            if (!isRunning) {
+                isRunning = true;
+                timer = setInterval(updateTime, 1000);
+            }
+        }
+
+        function stopTimer() {
+            isRunning = false;
+            clearInterval(timer);
+        }
+
+        function resetTimer() {
+            stopTimer();
+            time = mode === "stopwatch" ? 0 : 300; // Default timer: 5 minutes
+            updateDisplay();
+        }
+
+        function toggleMode() {
+            resetTimer();
+            mode = mode === "stopwatch" ? "timer" : "stopwatch";
+            document.getElementById("mode").innerText = "Mode: " + (mode === "stopwatch" ? "Stopwatch" : "Countdown Timer");
+        }
+
+        function updateTime() {
+            if (mode === "stopwatch") {
+                time++;
+            } else {
+                if (time > 0) {
+                    time--;
+                } else {
+                    stopTimer();
+                }
+            }
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            let hours = Math.floor(time / 3600);
+            let minutes = Math.floor((time % 3600) / 60);
+            let seconds = time % 60;
+            document.getElementById("display").innerText = 
+                String(hours).padStart(2, '0') + ":" + 
+                String(minutes).padStart(2, '0') + ":" + 
+                String(seconds).padStart(2, '0');
+        }
+
+        resetTimer();
+    </script>
+</body>
+</html>
