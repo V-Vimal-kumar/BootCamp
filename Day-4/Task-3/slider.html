@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .slider-container {
+            position: relative;
+            max-width: 600px;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev { left: 0; }
+        .next { right: 0; }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="slide"><img src="https://media.istockphoto.com/id/531464020/photo/beef-steaks-on-the-grill.jpg?s=612x612&w=0&k=20&c=bGH-BIOJULADBnyfCiEs5nbM1gWYHKr1UiSDbPn_vZY=" alt="Image 1" height="400" width="400"></div>
+        <div class="slide"><img src="https://media.istockphoto.com/id/496919860/photo/bbq-chicken-whole.jpg?s=612x612&w=0&k=20&c=CCoJhS4M6I1Vg-Tc5AjiqMEhxS0AFQIp90KpEvASaHU=" alt="Image 2"height="400" width="400"></div>
+        <div class="slide"><img src="https://static.vecteezy.com/system/resources/previews/023/185/822/non_2x/fried-chicken-with-smoke-on-a-black-background-selective-focus-ai-generative-image-free-photo.jpg" alt="Image 3"height="400" width="400"></div>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.display = "none");
+            slides[index].style.display = "block";
+        }
+
+        function changeSlide(step) {
+            currentSlide += step;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

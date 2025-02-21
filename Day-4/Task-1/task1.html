@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://www.topgear.com/sites/default/files/images/news-article/2015/09/4b061fde6c75cc9ff14c1b5bce9ab2bd/row_5198.jpg" width="500" height="300" id="img"><br>
+    <button id="btn">HIDE</button>
+</body>
+</html>
+
+<script>
+    const img=document.getElementById("img");
+    const btn=document.getElementById("btn");
+
+    btn.addEventListener("click",event=>{
+        if(img.style.visibility==="hidden"){
+            btn.textContent="HIDE";
+            img.style.visibility="visible";
+        }
+        else{
+            img.style.visibility="hidden";
+            btn.textContent="SHOW";
+        }
+    });
+</script>
