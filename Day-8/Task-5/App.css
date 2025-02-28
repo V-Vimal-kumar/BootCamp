@@ -1,0 +1,26 @@
+.stu {
+  border-radius: 30px;
+  padding: 40px;
+  max-width: 400px; /* Adjust width */
+  margin: auto; /* Center the box */
+}
+
+.student-card {
+  text-align: center;
+  background: rgb(166, 179, 189);
+  border-style: solid;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px auto;
+  width: 250px; /* Adjust width */
+}
+
+.head {
+  background: rgb(80, 13, 81);
+  color: rgb(212, 200, 200);
+  padding: 10px;
+}
+
+body {
+  background: rgb(152, 140, 131);
+}

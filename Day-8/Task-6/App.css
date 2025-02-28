@@ -1,0 +1,55 @@
+.stu {
+  border-radius: 30px;
+  padding: 40px;
+  max-width: 600px; /* Adjust width */
+  margin: auto; /* Center the box */
+  text-align: center;
+}
+
+.student-card {
+  border-style: solid;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px auto;
+  width: 300px; /* Adjust width */
+  color: black; /* Ensure text is readable */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Colors for different years */
+.student-card[data-year="freshman"] {
+  background-color: green;
+  color: white;
+}
+
+.student-card[data-year="sophomore"] {
+  background-color: yellow;
+  color: black;
+}
+
+.student-card[data-year="junior"] {
+  background-color: blue;
+  color: white;
+}
+
+.student-card[data-year="senior"] {
+  background-color: red;
+  color: white;
+}
+
+.student-card[data-year="default"] {
+  background-color: gray;
+  color: white;
+}
+
+.head {
+  background: rgb(80, 13, 81);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+body {
+  background: rgb(216, 198, 185);
+}
